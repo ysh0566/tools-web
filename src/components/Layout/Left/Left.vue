@@ -6,7 +6,7 @@ import { useRouter, useRoute } from "vue-router"
 const router = useRouter()
 const route = useRoute()
 
-const appName = ref(import.meta.env.VITE_APP_TITLE || '工具坊')
+const appName = ref(import.meta.env.VITE_APP_TITLE || 'Tools123')
 const appNet = ref(import.meta.env.VITE_APP_DESC || '')
 //菜单选中
 const defaultActive = ref('')
@@ -28,7 +28,7 @@ const handleOpen = () => {
 }
 
 const handleClose = () => {
-  
+
 }
 
 //跳转锚点
@@ -55,7 +55,7 @@ const gotoAbout = () => {
 
 onMounted(async () => {
   await getToolCates()
-  
+
 })
 </script>
 
@@ -95,7 +95,7 @@ onMounted(async () => {
                 <el-menu-item
                   @click="gotoAnchor('cate_' + item.id)"
                   :index="item.id.toString()"
-                  v-for="(item,index) in toolsStore.cates" 
+                  v-for="(item,index) in toolsStore.cates"
                   :key="index"
                 >
                   {{ item.title }}
